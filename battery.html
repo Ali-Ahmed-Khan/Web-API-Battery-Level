@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Battery Life</title>
+</head>
+
+<body>
+  <h1 id="battery_life"></h1>
+</body>
+
+
+
+</html>
+
+<script>
+  navigator.getBattery().then(function (battery) {
+    let level = battery.level * 100 + '%';
+    console.log("Your Battery Life is " + level);
+    document.getElementById('battery_life').innerHTML = 'Your Battery Life is ' + level
+  });
+</script>
